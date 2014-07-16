@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{570B2312-10BA-40EC-9E67-39E426C88816}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CardTK</RootNamespace>
+    <AssemblyName>CardTK</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\Project\CardTK\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FluorineFx">
+      <HintPath>C:\Program Files (x86)\FluorineFx\Bin\net\3.5\FluorineFx.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\DragItem.cs" />
+    <Compile Include="Components\PlayerMono.cs" />
+    <Compile Include="Components\PokerMono.cs" />
+    <Compile Include="Controller\BattleControl.cs" />
+    <Compile Include="Controller\CommonRes.cs" />
+    <Compile Include="Controller\Test2.cs" />
+    <Compile Include="Data\Battle\board\Poker.cs" />
+    <Compile Include="Data\Battle\bo\BattleResultBo.cs" />
+    <Compile Include="Data\Battle\bo\BattleRewardBo.cs" />
+    <Compile Include="Data\Battle\bo\OptBo.cs" />
+    <Compile Include="Data\Battle\bo\ReplayBo.cs" />
+    <Compile Include="Data\Battle\buff\AdditionDigit.cs" />
+    <Compile Include="Data\Battle\buff\AdditionFactor.cs" />
+    <Compile Include="Data\Battle\player\Player.cs" />
+    <Compile Include="Data\Battle\player\PlayerMini.cs" />
+    <Compile Include="Data\Battle\round\DetailMf.cs" />
+    <Compile Include="Data\Battle\round\HalfRound.cs" />
+    <Compile Include="Data\Battle\round\LineOpt.cs" />
+    <Compile Include="Data\Battle\round\OdmFactor.cs" />
+    <Compile Include="Data\Battle\round\OppositeDetailMf.cs" />
+    <Compile Include="Data\Battle\round\Opt.cs" />
+    <Compile Include="Data\Battle\round\Pokerline.cs" />
+    <Compile Include="Data\Battle\round\PokerMf.cs" />
+    <Compile Include="Data\Battle\round\SkillOpt.cs" />
+    <Compile Include="Data\bo\ChatMessageBO.cs" />
+    <Compile Include="Data\bo\PkHall.cs" />
+    <Compile Include="Data\bo\PkRoom.cs" />
+    <Compile Include="Data\bo\PkSeat.cs" />
+    <Compile Include="Data\bo\RaffleBo.cs" />
+    <Compile Include="Data\bo\Reward.cs" />
+    <Compile Include="Data\bo\ShareBo.cs" />
+    <Compile Include="Data\bo\StarBo.cs" />
+    <Compile Include="Net\AMF3Protocol.cs" />
+    <Compile Include="Net\SessionInfo.cs" />
+    <Compile Include="Net\NotifyListVO.cs" />
+    <Compile Include="Net\NotifyVO.cs" />
+    <Compile Include="Net\ResultDataVO.cs" />
+    <Compile Include="Controller\NetCtrl.cs" />
+    <Compile Include="Controller\Test.cs" />
+    <Compile Include="Data\vo\CfgAiVO.cs" />
+    <Compile Include="Data\vo\CfgAptitudeMendVO.cs" />
+    <Compile Include="Data\vo\CfgAsterismVO.cs" />
+    <Compile Include="Data\vo\CfgAttrAffectDamVO.cs" />
+    <Compile Include="Data\vo\CfgBattlePowerMatchVO.cs" />
+    <Compile Include="Data\vo\CfgBpMatchZoneVO.cs" />
+    <Compile Include="Data\vo\CfgCampsiteVO.cs" />
+    <Compile Include="Data\vo\CfgCorpsComboVO.cs" />
+    <Compile Include="Data\vo\CfgCorpsLevelVO.cs" />
+    <Compile Include="Data\vo\CfgCorpsSkillLevelVO.cs" />
+    <Compile Include="Data\vo\CfgCorpsSkillVO.cs" />
+    <Compile Include="Data\vo\CfgCorpsVO.cs" />
+    <Compile Include="Data\vo\CfgElementComboVO.cs" />
+    <Compile Include="Data\vo\CfgEquipmentGoodsVO.cs" />
+    <Compile Include="Data\vo\CfgEquipmentLevelVO.cs" />
+    <Compile Include="Data\vo\CfgEquipmentRenewVO.cs" />
+    <Compile Include="Data\vo\CfgEquipmentVO.cs" />
+    <Compile Include="Data\vo\CfgExchangeVO.cs" />
+    <Compile Include="Data\vo\CfgGeneralLevelVO.cs" />
+    <Compile Include="Data\vo\CfgGeneralQualityVO.cs" />
+    <Compile Include="Data\vo\CfgGeneralShopNodeVO.cs" />
+    <Compile Include="Data\vo\CfgGeneralShopVO.cs" />
+    <Compile Include="Data\vo\CfgGeneralSkillVO.cs" />
+    <Compile Include="Data\vo\CfgGeneralVO.cs" />
+    <Compile Include="Data\vo\CfgGiftVO.cs" />
+    <Compile Include="Data\vo\CfgGoodsNumVO.cs" />
+    <Compile Include="Data\vo\CfgGoodsUnregularNumVO.cs" />
+    <Compile Include="Data\vo\CfgGoodsVO.cs" />
+    <Compile Include="Data\vo\CfgGuideVO.cs" />
+    <Compile Include="Data\vo\CfgKeywordVO.cs" />
+    <Compile Include="Data\vo\CfgLiveBoxItemVO.cs" />
+    <Compile Include="Data\vo\CfgLiveBoxVO.cs" />
+    <Compile Include="Data\vo\CfgLiveTaskVO.cs" />
+    <Compile Include="Data\vo\CfgMajorSkillGridVO.cs" />
+    <Compile Include="Data\vo\CfgMajorSkillVO.cs" />
+    <Compile Include="Data\vo\CfgMapNodeVO.cs" />
+    <Compile Include="Data\vo\CfgMapVO.cs" />
+    <Compile Include="Data\vo\CfgMarketPriceVO.cs" />
+    <Compile Include="Data\vo\CfgMarketSubTypeVO.cs" />
+    <Compile Include="Data\vo\CfgMarketTypeVO.cs" />
+    <Compile Include="Data\vo\CfgMarketVO.cs" />
+    <Compile Include="Data\vo\CfgMineItemVO.cs" />
+    <Compile Include="Data\vo\CfgMonsterVO.cs" />
+    <Compile Include="Data\vo\CfgRaffleCostVO.cs" />
+    <Compile Include="Data\vo\CfgRewardItemVO.cs" />
+    <Compile Include="Data\vo\CfgSoulVO.cs" />
+    <Compile Include="Data\vo\CfgStarVO.cs" />
+    <Compile Include="Data\vo\CfgSuitLevelGoodsVO.cs" />
+    <Compile Include="Data\vo\CfgSuitLevelVO.cs" />
+    <Compile Include="Data\vo\CfgSuitVO.cs" />
+    <Compile Include="Data\vo\CfgSystemOpenVO.cs" />
+    <Compile Include="Data\vo\CfgTitleVO.cs" />
+    <Compile Include="Data\vo\CfgUnionBuildGuardianVO.cs" />
+    <Compile Include="Data\vo\CfgUnionBuildMarketVO.cs" />
+    <Compile Include="Data\vo\CfgUnionBuildSkillVO.cs" />
+    <Compile Include="Data\vo\CfgUnionBuildSmithVO.cs" />
+    <Compile Include="Data\vo\CfgUnionDonateVO.cs" />
+    <Compile Include="Data\vo\CfgUnionMarketPriceVO.cs" />
+    <Compile Include="Data\vo\CfgUnionMarketVO.cs" />
+    <Compile Include="Data\vo\CfgUnionPowerVO.cs" />
+    <Compile Include="Data\vo\CfgUnionSkillVO.cs" />
+    <Compile Include="Data\vo\CfgUnionTaskVO.cs" />
+    <Compile Include="Data\vo\CfgUnionVO.cs" />
+    <Compile Include="Data\vo\CfgUserLevelVO.cs" />
+    <Compile Include="Data\vo\CfgWarAptitudeVO.cs" />
+    <Compile Include="Data\vo\CfgWarBoxVO.cs" />
+    <Compile Include="Data\vo\CfgWarFormationVO.cs" />
+    <Compile Include="Data\vo\CfgWarNodeVO.cs" />
+    <Compile Include="Data\vo\CfgWarRandomVO.cs" />
+    <Compile Include="Data\vo\CfgWarTrapVO.cs" />
+    <Compile Include="Data\vo\CfgWarVO.cs" />
+    <Compile Include="Data\vo\MapNodeInfoVO.cs" />
+    <Compile Include="Data\vo\SysAccountVO.cs" />
+    <Compile Include="Data\vo\SysMineLayoutVO.cs" />
+    <Compile Include="Data\vo\SysUnionEventVO.cs" />
+    <Compile Include="Data\vo\SysUnionVO.cs" />
+    <Compile Include="Data\vo\SysUserBackpackVO.cs" />
+    <Compile Include="Data\vo\SysUserBattleRecordVO.cs" />
+    <Compile Include="Data\vo\SysUserBuffVO.cs" />
+    <Compile Include="Data\vo\SysUserCorpsSkillVO.cs" />
+    <Compile Include="Data\vo\SysUserCorpsVO.cs" />
+    <Compile Include="Data\vo\SysUserDailyNumVO.cs" />
+    <Compile Include="Data\vo\SysUserEmailRewardVO.cs" />
+    <Compile Include="Data\vo\SysUserEmailVO.cs" />
+    <Compile Include="Data\vo\SysUserEquipmentLevelVO.cs" />
+    <Compile Include="Data\vo\SysUserGeneralShopNumVO.cs" />
+    <Compile Include="Data\vo\SysUserGeneralShopVO.cs" />
+    <Compile Include="Data\vo\SysUserGeneralVO.cs" />
+    <Compile Include="Data\vo\SysUserGiftLevelVO.cs" />
+    <Compile Include="Data\vo\SysUserGiftVO.cs" />
+    <Compile Include="Data\vo\SysUserGoodsNumVO.cs" />
+    <Compile Include="Data\vo\SysUserGuideVO.cs" />
+    <Compile Include="Data\vo\SysUserLiveTaskVO.cs" />
+    <Compile Include="Data\vo\SysUserLiveVO.cs" />
+    <Compile Include="Data\vo\SysUserMapNodeVO.cs" />
+    <Compile Include="Data\vo\SysUserMapVO.cs" />
+    <Compile Include="Data\vo\SysUserNumVO.cs" />
+    <Compile Include="Data\vo\SysUserRaffleVO.cs" />
+    <Compile Include="Data\vo\SysUserRelationVO.cs" />
+    <Compile Include="Data\vo\SysUserSettingVO.cs" />
+    <Compile Include="Data\vo\SysUserShieldedVO.cs" />
+    <Compile Include="Data\vo\SysUserSkillVO.cs" />
+    <Compile Include="Data\vo\SysUserSoulVO.cs" />
+    <Compile Include="Data\vo\SysUserStarVO.cs" />
+    <Compile Include="Data\vo\SysUserSuitVO.cs" />
+    <Compile Include="Data\vo\SysUserSystemVO.cs" />
+    <Compile Include="Data\vo\SysUserUnionApplyVO.cs" />
+    <Compile Include="Data\vo\SysUserUnionInviteVO.cs" />
+    <Compile Include="Data\vo\SysUserUnionSkillVO.cs" />
+    <Compile Include="Data\vo\SysUserUnionTaskVO.cs" />
+    <Compile Include="Data\vo\SysUserUnionVO.cs" />
+    <Compile Include="Data\vo\SysUserVO.cs" />
+    <Compile Include="Data\vo\SysUserWarNodeVO.cs" />
+    <Compile Include="Data\vo\SysUserWarVO.cs" />
+    <Compile Include="Net\ReqResVO.cs" />
+    <Compile Include="Confs\Conf.cs" />
+    <Compile Include="Net\SocketClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /y E:\Client\Unity3D\Code\CardTK\CardTK\bin\Debug\CardTK.dll E:\Client\Unity3D\Project\CardTK\Assets\Scripts</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
